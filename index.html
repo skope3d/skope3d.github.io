@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKoPe3D Dataset</title>
+
+<!--    Add Google Analytics -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+<!--  <link rel="icon" href="./static/images/favicon.svg">-->
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./static/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./static/icons/favicon-16x16.png">
+<link rel="manifest" href="./static/icons/site.webmanifest">
+<link rel="mask-icon" href="./static/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://himanshupahadia.me/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+<!--
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+-->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SKoPe3D
+              <p style="font-size:xx-large;">A Synthetic Keypoint Perception 3D Dataset for Vehicle Pose Estimation from Traffic Monitoring Cameras</p></h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Himanshu Pahadia</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Duo Lu</a><sup>2</sup>,</span>
+              <span class="author-block">
+              <a href="http://sofienbouaziz.com">Bharatesh Chakravarthi</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Yezhou Yang</a><sup>1</sup>,
+            </span>
+            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Arizona State University</span>
+            <span class="author-block"><sup>2</sup>Ryder University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Under Review)</span>
+                </a>
+              </span>
+<!--
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+-->
+              <!-- Video Link. -->
+<!--
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Available soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="#datasetsection"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+<!--
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+-->
+        <img id="teaser" src="./static/images/SKOPE3Dbackground.png"
+                 alt="Interpolation end reference image."/>
+      <h2 class="subtitle has-text-centered">
+        An overview of different scenes in the SKoPe3D dataset
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a unique high-diversity synthetic keypoint perception 3D dataset, SKoPe3D, which includes 33 keypoint annotations for each vehicle and is collected from a roadside view using the CARLA simulator. This feature makes SKoPe3D distinct from previously released traffic monitoring datasets. Additionally, as the dataset is simulated, it can be extended using publicly released data extension scripts. Furthermore, SKoPe3D cannot be utilized for illegal surveillance as it does not include any sensitive information such as license plates, human faces, roads, and buildings. Traffic monitoring datasets with keypoint annotations and 3D/2D annotations are valuable for traffic analysis, autonomous driving, and 3D scene reconstruction, and have the potential for use in a wide variety of studies.
+          </p>
+          <p>
+            Moreover, we present an evaluation of a classic keypoint detector on the dataset, Keypoint R-CNN. Performance was measured using widely accepted metrics, such as percentage of correct keypoints (PCK) and precision-recall, and the experiments demonstrated the real value of such a synthetic dataset as it achieved good prediction accuracies.
+          </p>
+          <p>
+            The study represents a step towards bridging the gap between synthetic and real-world data, as training a keypoint detector on a synthetic dataset allows the model to generalize on real-world images to some extent. This demonstrates the knowledge-transferability between synthetic and real-world data and highlights the value of SKoPe3D.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+<!--
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+-->
+
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+
+<section class="section" id="datasetsection">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Dataset</h2>
+      <div class="content has-text-justified">
+          <p>
+              We provide a comprehensive dataset that includes 2D and 3D bounding boxes, tracking IDs, and 33 keypoints for each vehicle in the scene. Spanning over 25k frames across 28 diverse scenes, SKoPe3D contains over 150k vehicle instances and 4.9 million keypoints.
+<!--            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel-->
+<!--            viewpoint such as a stabilized camera by playing back the training deformations.-->
+          </p>
+        <div class="publication-video">
+          
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdapvd5SwcTYlra0E6j-bKtxJyzFaxCVBsmtEo6CUAMycUOQg/viewform?embedded=true" height="1012" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!--          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdapvd5SwcTYlra0E6j-bKtxJyzFaxCVBsmtEo6CUAMycUOQg/viewform?embedded=true" height="1011" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>-->
+<!--          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6uBc8xLCCwkdkFjuxAK2Dt6TueWzt7opm-nX0JnrSTh7-NA/viewform?embedded=true" width="640" height="1011" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>-->
+        </div>
+      </div>
+    
+  </div>
+</section> 
+    
+    
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code></code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is take from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
